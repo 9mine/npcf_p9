@@ -207,11 +207,6 @@ npcf:register_npc("npcf_p9:npc" ,{
 			end,
 		})
 		inv:set_size("input", 1)
-		local mvobj = npcf.movement.getControl(self)
-        local chair = minetest.find_node_near(mvobj.pos, 16, {
-            "luxury_decor:kitchen_wooden_chair"
-        })
-		mvobj:walk(chair, 3, {teleport_on_stuck = true})
 	end,
 	on_rightclick = function(self, clicker)
 		local player_name = clicker:get_player_name()
